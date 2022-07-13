@@ -21,7 +21,10 @@ const controlRecipes = async function () {
 
     // 0) Update results view to mark selected search results
     resultsView.update(model.getSearchResultsPage());
+
+    // 3) Updating bookmarks view
     bookmarksView.update(model.state.bookmarkeds);
+
     // 1) Loading the recipe
     await model.loadRecipe(id);
 
@@ -29,6 +32,7 @@ const controlRecipes = async function () {
     recipeView.render(model.state.recipe);
   } catch (err) {
     recipeView.renderError();
+    console.log(err);
   }
 };
 
@@ -42,16 +46,16 @@ const controlSearchResults = async function () {
 
     // 2) Load search results
     await model.loadSearchResults(query);
-
     // 3) Render results
     // resultsView.render(model.state.search.results);
     resultsView.render(model.getSearchResultsPage());
-
+    console.log('entrei2');
     // 4) Render initial pagination buttons
     paginationView.render(model.state.search);
     recipeView.render(model.state.recipe);
   } catch (err) {
-    console.log(err);
+    console.log('errou');
+    console.error(err);
   }
 };
 
@@ -83,7 +87,12 @@ const controlAddbookmark = function () {
   bookmarksView.render(model.state.bookmarkeds);
 };
 
+const controlBookmarks = function () {
+  bookmarksView.render(model.state.bookmarkeds);
+};
+
 const init = function () {
+  bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipes);
   recipeView.addHandlerUpdateServings(controlServings);
   recipeView.addHandlerAddBookmark(controlAddbookmark);
