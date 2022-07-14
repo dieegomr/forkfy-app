@@ -47,12 +47,9 @@ const controlSearchResults = async function () {
     // 3) Render results
     // resultsView.render(model.state.search.results);
     resultsView.render(model.getSearchResultsPage());
-    console.log('entrei2');
     // 4) Render initial pagination buttons
     paginationView.render(model.state.search);
-    recipeView.render(model.state.recipe);
   } catch (err) {
-    console.log('errou');
     console.error(err);
   }
 };
@@ -96,7 +93,6 @@ const controlAddRecipe = async function (newRecipe) {
 
     // Upload new Recipe data
     await model.uploadRecipe(newRecipe);
-    console.log(model.state.recipe);
 
     // Render recipe
     recipeView.render(model.state.recipe);
