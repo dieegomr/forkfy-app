@@ -32,7 +32,7 @@ The HTML and CSS were ready, but it was necessary to follow the flowchart bellow
 </ul>
 
 <h3>Sample:</h3>
-<p>Click <a href="https://dieegomr.github.io/forkfy-app/">here!</a> to access the website</p>
+<p>Click <a href="https://forkfy-recipe-diego.netlify.app">here!</a> to access the website</p>
 <img src="./readme_images/forkfy-app.gif" alt="website gif" width="800" height="500">
 
 <h3>How to run this website?</h3>

@@ -32,7 +32,7 @@ O HTML e o CSS estavam prontos, mas foi necessário seguir o fluxograma abaixo p
 </ul>
 
 <h3>Amostra:</h3>
-<p>Clique <a href="https://dieegomr.github.io/forkfy-app/">aqui!</a> para acessar o site</p>
+<p>Clique <a href="hhttps://forkfy-recipe-diego.netlify.app">aqui!</a> para acessar o site</p>
 <img src="./readme_images/forkfy-app.gif" alt="gif do site" largura="800" altura="500">
 
 <h3>Como rodar esse site no seu PC:</h3>
